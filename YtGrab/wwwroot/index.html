@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YtGrab – YouTube to MP4 &amp; MP3 Downloader BY HS</title>
+    <meta name="description" content="Download YouTube videos as MP4 in any available quality or as MP3 audio.">
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>YouTube Downloader</h1>
+        <p>Paste a link, choose a quality, download as MP4 or MP3.</p>
+
+        <form id="url-form" autocomplete="off">
+            <input id="url" type="url" required maxlength="300"
+                   placeholder="https://www.youtube.com/watch?v=..." aria-label="YouTube link">
+            <button id="fetch-btn" type="submit">Fetch</button>
+        </form>
+
+        <p id="error" class="error" role="alert" hidden></p>
+    </header>
+
+    <main>
+        <section id="result" class="card" hidden>
+            <div class="video">
+                <img id="thumb" alt="" width="320" height="180">
+                <div class="meta">
+                    <h2 id="title"></h2>
+                    <p id="channel"></p>
+                    <p id="duration"></p>
+                </div>
+            </div>
+
+            <h3>Video (MP4)</h3>
+            <div id="mp4-list" class="grid"></div>
+
+            <h3>Audio</h3>
+            <div id="mp3-list" class="grid"></div>
+
+            <div id="progress-box" hidden>
+                <div class="bar"><div id="bar-fill"></div></div>
+                <p id="status"></p>
+                <a id="manual-link" href="#" hidden>Click here if the download didn't start</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            Only download content you own or have permission to download. You are responsible for complying
+            with YouTube's Terms of Service and applicable copyright laws.
+        </p>
+    </footer>
+
+    <script src="/js/app.js" defer></script>
+</body>
+</html>
